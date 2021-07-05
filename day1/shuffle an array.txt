@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        int len=2*n;
+        vector<int> v(len);
+        int a=0,x=0,y=n;
+        while(a<len)
+        {
+            v[a++]=nums[x++];
+            v[a++]=nums[y++];
+        }
+        return v;
+        
+    }
+};

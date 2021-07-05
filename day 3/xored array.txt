@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> decode(vector<int>& encoded, int first) {
+       vector<int> res;
+        int m;
+        res.push_back(first);
+        for(int i=0;i<encoded.size();i++)
+        {
+            m=encoded[i]^first;
+            first=m;
+            res.push_back(first);
+        }
+        return res;
+    }
+};
